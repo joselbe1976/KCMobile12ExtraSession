@@ -11,6 +11,9 @@ class LoginViewController: UIViewController {
 
     var rootVM : RootViewModel?
     
+    @IBOutlet weak var user: UITextField!
+    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
     init(vm:RootViewModel){
         super.init(nibName: nil, bundle: nil)
@@ -23,7 +26,13 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func LoginButton(_ sender: Any) {
-        rootVM?.viewActive = .Home
+        if let user = user.text,
+           let pass = password.text{
+        
+                rootVM?.login(user: user, pass: pass)
+        } else{
+            //mensaje al usuario de que rellene
+        }
     }
     
     
@@ -35,7 +44,15 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        //binding con el error del viewModel
+        self.rootVM?.errorMessage.bind({ data in
+            self.errorLabel.text = data
+        })
+        
+        
+        user.text = "bejl@keepcoding.es"
+        password.text = "123456"
+        
     }
 
 

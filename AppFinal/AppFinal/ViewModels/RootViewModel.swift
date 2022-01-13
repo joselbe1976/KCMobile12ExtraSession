@@ -18,6 +18,12 @@ enum viewStatus {
 
 final class RootViewModel {
     
+    var rootInteractor : RootInteractorProtocol
+    
+    init(interactor: RootInteractorProtocol = RootInteractor()){
+        self.rootInteractor = interactor
+    }
+    
     //Pantalla Activa a visualizar
     var viewActive: viewStatus = .Login {
         didSet{
@@ -36,8 +42,25 @@ final class RootViewModel {
     var onViewChange: (() ->Void)?
     
     
-    func LoadEmpleados(){
+    var errorMessage = BindingObject("") //mensaje de error para la vista
+    
+    
+    
+    
+    func login(user:String, pass:String){
         
+        self.errorMessage.setValue(value: "Haciendo Login... espere...")
+        
+        rootInteractor.login(user: user, pass: pass) {
+            //Login Success
+            self.viewActive = .Home
+            self.errorMessage.setValue(value: "Conectado")
+        } onError: {
+            // Login Error
+            print("Error login")
+            self.errorMessage.setValue(value: "Error en el login")
+        }
+
     }
     
 }

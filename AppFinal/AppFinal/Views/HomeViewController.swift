@@ -6,13 +6,28 @@
 //
 
 import UIKit
+import MapKit //añadir
+import Combine //añadir
+import CoreLocation
 
 class HomeViewController: UIViewController {
-    var rootVM: RootViewModel?
     
-    init(vm:RootViewModel){
+    @IBOutlet weak var mapa: MKMapView!
+    
+    
+    var rootVM: RootViewModel?
+    var herosVM: HerosViewModel?
+    var suscriptors = Set<AnyCancellable>() //Combine
+    
+    
+    let locationMAnager = CLLocationManager() // localizacion del usuario conectado..
+    
+    
+    
+    init(vm:RootViewModel, heroVM : HerosViewModel = HerosViewModel()){
         super.init(nibName: nil, bundle: nil)
         self.rootVM = vm
+        self.herosVM = heroVM
     }
     
     required init?(coder: NSCoder) {
@@ -26,20 +41,81 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-
-        // Do any additional setup after loading the view.
+        //localizamos el mapa en madrid, en el mejor sitio...
+        
+        let initiaLocation = CLLocation(latitude: 40.45064838408302, longitude: -3.6878562736371205)
+        mapa.centerToLocation(initiaLocation)
+        
+        
+        //Combine: Binding....
+        // Creamos el suscriptor del publicador del ViewModelo
+        self.herosVM?.locations
+            .sink(receiveValue: { data in
+                //Nos llegan las localizaciones del heroe...
+                print("Localizacions Tenemos \(data.count)")
+                
+                //recorremos cada Localizacion del heroe
+                data.forEach { locat in
+                    let modelMapKit = self.herosVM?.convertModelToMaps(model: locat)
+                    
+                    if let model = modelMapKit {
+                        self.mapa.addAnnotation(model)
+                    }
+                }
+            })
+            .store(in: &suscriptors)
+        
+        
+        //Lanzo la carga de las localizaciones...
+        self.herosVM?.loadLocations()
+        
+        
+        //inicializamos la localizacion
+        UserLocation()
     }
 
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+// COre Locations.....
+
+extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    //localizar al usuario del dispositivo...
+    func UserLocation() {
+        self.locationMAnager.requestAlwaysAuthorization()
+        self.locationMAnager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled(){
+            //Usuario ha dado el OK....
+            locationMAnager.delegate = self //Asigno el delegado a mi mismo...
+            locationMAnager.desiredAccuracy = kCLLocationAccuracyBest
+            locationMAnager.startUpdatingLocation()
+        }
+
+        //delegados de los Maps
+        mapa.delegate = self
+        mapa.mapType = .standard
+        mapa.isZoomEnabled = true
+        mapa.isScrollEnabled = true
+        
+        if let coor = mapa.userLocation.location?.coordinate {
+            mapa.setCenter(coor, animated: true)
+        }
     }
-    */
-
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue : CLLocationCoordinate2D = manager.location!.coordinate
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion(center: locValue, span: span)
+        mapa.setRegion(region, animated: true)
+        
+        //añadimos nuestra pocision en el mapa
+        let anotacion = MKPointAnnotation()
+        anotacion.coordinate = locValue
+        anotacion.title = "Estas AQUIIII"
+        mapa.addAnnotation(anotacion)
+        
+    }
 }

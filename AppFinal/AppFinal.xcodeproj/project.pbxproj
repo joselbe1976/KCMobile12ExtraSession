@@ -37,6 +37,36 @@
 		317A138227909DEB00A8595F /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A138127909DEB00A8595F /* RootViewModel.swift */; };
 		317A138327909DEB00A8595F /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A138127909DEB00A8595F /* RootViewModel.swift */; };
 		317A138427909DEB00A8595F /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A138127909DEB00A8595F /* RootViewModel.swift */; };
+		317A138F2790A8F600A8595F /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A138E2790A8F600A8595F /* RootInteractor.swift */; };
+		317A13912790A8F600A8595F /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A138E2790A8F600A8595F /* RootInteractor.swift */; };
+		317A13922790A90600A8595F /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A138E2790A8F600A8595F /* RootInteractor.swift */; };
+		317A13942790A98D00A8595F /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13932790A98D00A8595F /* TypeAlias.swift */; };
+		317A13952790A98D00A8595F /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13932790A98D00A8595F /* TypeAlias.swift */; };
+		317A13962790A98D00A8595F /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13932790A98D00A8595F /* TypeAlias.swift */; };
+		317A13982790AAF200A8595F /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13972790AAF200A8595F /* BaseNetwork.swift */; };
+		317A13992790AAF200A8595F /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13972790AAF200A8595F /* BaseNetwork.swift */; };
+		317A139A2790AAF200A8595F /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13972790AAF200A8595F /* BaseNetwork.swift */; };
+		317A139C2790ADF100A8595F /* NetworkLoginRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A139B2790ADF100A8595F /* NetworkLoginRest.swift */; };
+		317A139D2790ADF100A8595F /* NetworkLoginRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A139B2790ADF100A8595F /* NetworkLoginRest.swift */; };
+		317A139E2790ADF100A8595F /* NetworkLoginRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A139B2790ADF100A8595F /* NetworkLoginRest.swift */; };
+		317A13A02790B94600A8595F /* BindingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A139F2790B94600A8595F /* BindingObject.swift */; };
+		317A13A12790B94600A8595F /* BindingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A139F2790B94600A8595F /* BindingObject.swift */; };
+		317A13A22790B94600A8595F /* BindingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A139F2790B94600A8595F /* BindingObject.swift */; };
+		317A13A42790C33A00A8595F /* MKMapView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13A32790C33A00A8595F /* MKMapView+extension.swift */; };
+		317A13A52790C33A00A8595F /* MKMapView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13A32790C33A00A8595F /* MKMapView+extension.swift */; };
+		317A13A62790C33A00A8595F /* MKMapView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13A32790C33A00A8595F /* MKMapView+extension.swift */; };
+		317A13A82790C4DD00A8595F /* HerosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13A72790C4DD00A8595F /* HerosModel.swift */; };
+		317A13A92790C4DD00A8595F /* HerosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13A72790C4DD00A8595F /* HerosModel.swift */; };
+		317A13AA2790C4DD00A8595F /* HerosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13A72790C4DD00A8595F /* HerosModel.swift */; };
+		317A13AC2790C67500A8595F /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13AB2790C67500A8595F /* HerosViewModel.swift */; };
+		317A13AD2790C67500A8595F /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13AB2790C67500A8595F /* HerosViewModel.swift */; };
+		317A13AE2790C67500A8595F /* HerosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13AB2790C67500A8595F /* HerosViewModel.swift */; };
+		317A13B02790CEEF00A8595F /* HeroMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13AF2790CEEF00A8595F /* HeroMap.swift */; };
+		317A13B12790CEEF00A8595F /* HeroMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13AF2790CEEF00A8595F /* HeroMap.swift */; };
+		317A13B22790CEEF00A8595F /* HeroMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13AF2790CEEF00A8595F /* HeroMap.swift */; };
+		317A13B42790CFB700A8595F /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13B32790CFB700A8595F /* String+extension.swift */; };
+		317A13B52790CFB700A8595F /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13B32790CFB700A8595F /* String+extension.swift */; };
+		317A13B62790CFB700A8595F /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317A13B32790CFB700A8595F /* String+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +107,16 @@
 		317A137927909DD600A8595F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		317A137A27909DD600A8595F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		317A138127909DEB00A8595F /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		317A138E2790A8F600A8595F /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		317A13932790A98D00A8595F /* TypeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		317A13972790AAF200A8595F /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
+		317A139B2790ADF100A8595F /* NetworkLoginRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoginRest.swift; sourceTree = "<group>"; };
+		317A139F2790B94600A8595F /* BindingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingObject.swift; sourceTree = "<group>"; };
+		317A13A32790C33A00A8595F /* MKMapView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+extension.swift"; sourceTree = "<group>"; };
+		317A13A72790C4DD00A8595F /* HerosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosModel.swift; sourceTree = "<group>"; };
+		317A13AB2790C67500A8595F /* HerosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewModel.swift; sourceTree = "<group>"; };
+		317A13AF2790CEEF00A8595F /* HeroMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroMap.swift; sourceTree = "<group>"; };
+		317A13B32790CFB700A8595F /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +167,10 @@
 		317A133627909D6800A8595F /* AppFinal */ = {
 			isa = PBXGroup;
 			children = (
+				317A138C2790A7E900A8595F /* Tools */,
+				317A13892790A7AE00A8595F /* Domain */,
+				317A13862790A79A00A8595F /* Repository */,
+				317A13852790A79400A8595F /* Services */,
 				317A136827909D8200A8595F /* ViewModels */,
 				317A136727909D7C00A8595F /* Views */,
 				317A133727909D6800A8595F /* AppDelegate.swift */,
@@ -174,8 +218,86 @@
 			isa = PBXGroup;
 			children = (
 				317A138127909DEB00A8595F /* RootViewModel.swift */,
+				317A13AB2790C67500A8595F /* HerosViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		317A13852790A79400A8595F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				317A13972790AAF200A8595F /* BaseNetwork.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		317A13862790A79A00A8595F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				317A13882790A7A700A8595F /* network */,
+				317A13872790A7A300A8595F /* local */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		317A13872790A7A300A8595F /* local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		317A13882790A7A700A8595F /* network */ = {
+			isa = PBXGroup;
+			children = (
+				317A139B2790ADF100A8595F /* NetworkLoginRest.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		317A13892790A7AE00A8595F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				317A138B2790A7B900A8595F /* models */,
+				317A138A2790A7B300A8595F /* interactor */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		317A138A2790A7B300A8595F /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				317A138E2790A8F600A8595F /* RootInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		317A138B2790A7B900A8595F /* models */ = {
+			isa = PBXGroup;
+			children = (
+				317A13A72790C4DD00A8595F /* HerosModel.swift */,
+				317A13AF2790CEEF00A8595F /* HeroMap.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		317A138C2790A7E900A8595F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				317A138D2790A7F500A8595F /* extensions */,
+				317A13932790A98D00A8595F /* TypeAlias.swift */,
+				317A139F2790B94600A8595F /* BindingObject.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		317A138D2790A7F500A8595F /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				317A13A32790C33A00A8595F /* MKMapView+extension.swift */,
+				317A13B32790CFB700A8595F /* String+extension.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,13 +440,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317A139C2790ADF100A8595F /* NetworkLoginRest.swift in Sources */,
 				317A136B27909DB600A8595F /* LoginViewController.swift in Sources */,
 				317A138227909DEB00A8595F /* RootViewModel.swift in Sources */,
 				317A137327909DC600A8595F /* RegisterViewController.swift in Sources */,
+				317A13B02790CEEF00A8595F /* HeroMap.swift in Sources */,
+				317A13B42790CFB700A8595F /* String+extension.swift in Sources */,
+				317A13A02790B94600A8595F /* BindingObject.swift in Sources */,
+				317A13942790A98D00A8595F /* TypeAlias.swift in Sources */,
+				317A13A42790C33A00A8595F /* MKMapView+extension.swift in Sources */,
 				317A133C27909D6800A8595F /* ViewController.swift in Sources */,
 				317A133827909D6800A8595F /* AppDelegate.swift in Sources */,
 				317A133A27909D6800A8595F /* SceneDelegate.swift in Sources */,
+				317A13AC2790C67500A8595F /* HerosViewModel.swift in Sources */,
+				317A138F2790A8F600A8595F /* RootInteractor.swift in Sources */,
+				317A13A82790C4DD00A8595F /* HerosModel.swift in Sources */,
 				317A137B27909DD600A8595F /* HomeViewController.swift in Sources */,
+				317A13982790AAF200A8595F /* BaseNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,11 +464,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317A13922790A90600A8595F /* RootInteractor.swift in Sources */,
+				317A13992790AAF200A8595F /* BaseNetwork.swift in Sources */,
+				317A13B12790CEEF00A8595F /* HeroMap.swift in Sources */,
+				317A13A52790C33A00A8595F /* MKMapView+extension.swift in Sources */,
+				317A13AD2790C67500A8595F /* HerosViewModel.swift in Sources */,
 				317A138327909DEB00A8595F /* RootViewModel.swift in Sources */,
+				317A13952790A98D00A8595F /* TypeAlias.swift in Sources */,
 				317A137427909DC600A8595F /* RegisterViewController.swift in Sources */,
 				317A136C27909DB600A8595F /* LoginViewController.swift in Sources */,
 				317A134F27909D6A00A8595F /* AppFinalTests.swift in Sources */,
 				317A137C27909DD600A8595F /* HomeViewController.swift in Sources */,
+				317A13B52790CFB700A8595F /* String+extension.swift in Sources */,
+				317A13A92790C4DD00A8595F /* HerosModel.swift in Sources */,
+				317A13A12790B94600A8595F /* BindingObject.swift in Sources */,
+				317A139D2790ADF100A8595F /* NetworkLoginRest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,11 +486,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				317A13B62790CFB700A8595F /* String+extension.swift in Sources */,
+				317A13B22790CEEF00A8595F /* HeroMap.swift in Sources */,
 				317A137D27909DD600A8595F /* HomeViewController.swift in Sources */,
+				317A13AA2790C4DD00A8595F /* HerosModel.swift in Sources */,
+				317A13A62790C33A00A8595F /* MKMapView+extension.swift in Sources */,
 				317A136D27909DB600A8595F /* LoginViewController.swift in Sources */,
+				317A13AE2790C67500A8595F /* HerosViewModel.swift in Sources */,
+				317A13912790A8F600A8595F /* RootInteractor.swift in Sources */,
+				317A139A2790AAF200A8595F /* BaseNetwork.swift in Sources */,
 				317A135B27909D6A00A8595F /* AppFinalUITestsLaunchTests.swift in Sources */,
 				317A135927909D6A00A8595F /* AppFinalUITests.swift in Sources */,
+				317A13A22790B94600A8595F /* BindingObject.swift in Sources */,
 				317A138427909DEB00A8595F /* RootViewModel.swift in Sources */,
+				317A13962790A98D00A8595F /* TypeAlias.swift in Sources */,
+				317A139E2790ADF100A8595F /* NetworkLoginRest.swift in Sources */,
 				317A137527909DC600A8595F /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +666,8 @@
 				DEVELOPMENT_TEAM = 5VE37W94CE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppFinal/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "La app requiere localizacion";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "La app requiere localizacion";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -542,6 +696,8 @@
 				DEVELOPMENT_TEAM = 5VE37W94CE;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppFinal/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "La app requiere localizacion";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "La app requiere localizacion";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

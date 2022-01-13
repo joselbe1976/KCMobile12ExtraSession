@@ -26,11 +26,57 @@ class AppFinalTests: XCTestCase {
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testModelos() throws {
+        let model = HeroLocationsResponse(id: "10", longitud: "10,1", latitud: "10,2")
+        XCTAssertNotNil(model)
+        XCTAssertEqual(model.id, "10")
+        
+    }
+    
+    func testModelos2() throws {
+        let model = HeroLocationsRequest(id: "hola")
+        XCTAssertNotNil(model)
+        XCTAssertEqual(model.id, "hola")
+        
+    }
+    
+    func testLogin() throws {
+       let vm = RootViewModel(interactor: RootInteractorTesting())
+       XCTAssertNotNil(vm)
+       
+        //binding del mensaje
+        vm.errorMessage.bind { data in
+            if (data != "Haciendo Login... espere..." && data != ""){
+                XCTAssertEqual(data, "Conectado")
+            }
         }
+        
+        //lanzmaos el Login
+        vm.login(user: "user", pass: "Error")
+        
+    }
+    
+    func testLoginReal() throws {
+        let expectation = self.expectation(description: "Login Real")
+        
+        let vm = RootViewModel(interactor: RootInteractor())
+        XCTAssertNotNil(vm)
+        
+        //bindinf del mensaje
+        vm.errorMessage.bind { data in
+            if (data != "Haciendo Login... espere..." && data != ""){
+                XCTAssertEqual(data, "Conectado")
+                expectation.fulfill() //le dices que OK.
+            }
+        }
+        
+        
+        //lanzmaos el Login
+        vm.login(user: "bejl@keepcoding.es", pass: "123456")
+        
+        //Espero el espectation
+        self.waitForExpectations(timeout: 20) //esperamos 20 segundos a que termine el login
+        
     }
 
 }
